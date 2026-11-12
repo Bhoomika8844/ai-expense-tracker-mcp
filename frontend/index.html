@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseAI - Smart Expense Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">✦</div>
+                <div>
+                    <h2>ExpenseAI</h2>
+                    <p>Smart Expense Assistant</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                AI Assistant Online
+            </div>
+        </header>
+
+
+        <main class="chat-container">
+
+            <div class="welcome-section">
+                <div class="bot-icon">✦</div>
+
+                <h1>How can I help you today?</h1>
+
+                <p>
+                    Manage your expenses and perform calculations
+                    using simple conversations.
+                </p>
+            </div>
+
+
+            <div id="chatMessages" class="chat-messages">
+
+                <div class="message assistant">
+                    <div class="message-avatar">✦</div>
+
+                    <div class="message-content">
+                        Hello! I'm ExpenseAI. I can help you add,
+                        view and delete expenses, and perform
+                        mathematical calculations. What would
+                        you like to do?
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="suggestions">
+                <button onclick="useSuggestion('Show all my expenses')">
+                    View expenses
+                </button>
+
+                <button onclick="useSuggestion('What is 250 plus 350?')">
+                    Calculate numbers
+                </button>
+
+                <button onclick="useSuggestion('Add 500 rupees for food today')">
+                    Add expense
+                </button>
+            </div>
+
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Ask me anything about your expenses..."
+                    autocomplete="off"
+                >
+
+                <button id="sendButton" onclick="sendMessage()">
+                    Send ➤
+                </button>
+
+            </div>
+
+            <p class="footer-text">
+                Powered by Ollama · LangGraph · MCP
+            </p>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
